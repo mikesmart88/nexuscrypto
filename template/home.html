@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadata %}
+
+<meta name="description" content="Cryptorise trading platform" /> 
+<link rel="canonical" href="https://{{request.path_info}}" />               
+<meta property="og:site_name" content="Cryptorise" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Cryptorise - Homepage" />
+<meta property="og:description" content="Cryptorise trading platform" />
+<meta property="og:image" content="https://{% static 'blkapp/images/blklogo.png' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://{{request.path_info}}" />
+<meta name="twitter:site" content="@Cryptorise" />
+<meta name="twitter:title" content="Cryptorise - Homepage" />
+<meta name="twitter:description" content="Cryptorise trading platform" />
+<meta name="twitter:creator" content="@pythonmaster" />
+<meta name="twitter:image" content="https://{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="cryptoriselogo" />
+
+{% endblock %}
+
+{% block title %} Cryptorise - Homepage {% endblock %}
+
+{% block content %}
+
+
+
+ {% endblock %}

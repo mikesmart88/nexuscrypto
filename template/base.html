@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">{% block metadata %} {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexuscrypto trading platform">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff" />
+    <meta name="author" content="@pythonmaster" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="manifest" href="/manifest.json/" crossorigin="use-credentials" />
+    <link rel="search" type="application/opensearchdescription+xml" href="" title="">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'cryptoriseapp/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'cryptoriseapp/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'cryptoriseapp/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'cryptoriseapp/images/site.webmanifest' %}">
+    <link rel="stylesheet" href="{% static 'cryptoriseapp/styles/base.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+    <header class="head">
+        <div class="nav1">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentcolor"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                24 dale meadows rd Brampton L7A 4Z9 ON Canada.
+            </span>
+
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentcolor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                support@nexuscrypto.org
+            </span>
+
+            <span style="font-weight: 600;">
+                USD
+            </span>
+        </div>
+
+        <nav class="navagator">
+            <a href="" class="logo_holder">
+                <span class="logo">
+                    <img src="{% static 'cryptoriseapp/images/favicon.ico' %}" alt="">
+                </span>
+                <span class="logo_name">
+                    <b>Nexus</b><b>Crypto</b>
+                </span>
+            </a>
+
+            <div class="nav_link">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">FAQ</a>
+                <a href="" class="user_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M391-480q-36 0-60-27t-19-63l13-98q8-57 52-94.5T480-800q59 0 103 37.5t52 94.5l13 98q5 36-19 63t-60 27H391Zm0-80h178l-13-96q-4-28-25.5-46T480-720q-29 0-50.5 18T404-656l-13 96Zm89 0ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240 0Z"/></svg>
+                    Account
+                </a>
+            </div>
+
+            <div class="language">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg> 
+                </span>
+                <input type="text" id="language" list="language_list" placeholder="select language">
+                <datalist id="language_list">
+                    <option value="English">English</option>
+                </datalist>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="main_content">
+
+        {% block content %} {% endblock %}
+
+    </main>
+
+    <footer class="foot">
+        <div class="top_foot">
+            <div style="width: 300px;">
+                <h2>
+                    Nexuscrypto
+                </h2>
+                <p>
+                    Your most important asset is yourself. Invest your time, your efforts and money in the education, training and support of your most important asset.
+                </p>
+            </div>
+
+            <div>
+                <p>Company</p>
+                <a href="/">Home</a> <br>
+                <a href="">About</a> <br>
+                <a href="">FAQ</a> <br>
+                <a href="">News</a> <br>
+                <a href="">Rate us</a>
+            </div>
+
+            <div>
+                <p>User</p>
+                <a href="/">Register</a> <br>
+                <a href="">Login</a> <br>
+                <a href="">My dashboard</a>
+            </div>
+
+            <div class="newslist">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>
+                    Stay up-to-date with the latest cryptocurrency trends and investment opportunities.
+                </p>
+                <form action="" class="subs_form">
+                    <input type="email" name="email" id="email" placeholder="Enter your email address">
+                    <input type="submit" value="Subscribe" class="subs_btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="botton_foot">
+
+            <span>
+                &copy; 2021 Nexuscrypto. All rights reserved.
+            </span>
+
+            <span>
+                <a href="">Policy</a>
+                <a href="">Terms and condition</a>
+            </span>
+
+            <span>
+                Total debosite $200,600,507.06 | Total widthdrawal 
+            </span>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>
