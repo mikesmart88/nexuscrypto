@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadata %}
+
+<meta name="description" content="Nexuscrypto investment platform" /> 
+<link rel="canonical" href="https://{{request.path_info}}" />              
+<meta property="og:site_name" content="Nexuscrypto" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nexuscrypto - Place withdrwal" />
+<meta property="og:description" content="Nexuscrypto investment platform" />
+<meta property="og:image" content="https://{% static 'cryptoriseapp/images/favicon-32x32.png' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://{{request.path_info}}" />
+<meta name="twitter:site" content="@nexuscrypto"/>
+<meta name="twitter:title" content="Nexuscrypto - Place withdrwal" />
+<meta name="twitter:description" content="Nexuscrypto investment platform" />
+<meta name="twitter:creator" content="@pythonmaster" />
+<meta name="twitter:image" content="https://{% static 'cryptoriseapp/images/favicon-32x32.png' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="cryptologo" />
+<link rel="stylesheet" href="{% static 'cryptoriseapp/styles/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'cryptoriseapp/styles/forms.css' %}">
+
+{% endblock %}
+
+{% block title %} Nexuscrypto - Place withdrwal {% endblock %}
+
+{% block side_content %}
+
+<a href="/deposite/">
+        Deposite
+</a>
+
+<a href="/asset/withdraw">
+        Withdraw
+</a>
+
+<a href="/history/transactions">
+       Transaction history
+</a>
+
+<a href="/referral/" >
+        Referrals
+</a>
+
+<a href="/account/settings">
+       Setting
+</a>
+
+<a href="/logout/" class="side_link">
+       Logout
+</a>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="about_hero" style="background-image: url(/cryptoriseapp/static/cryptoriseapp/images/crypinvest.jpg);">
+<div class="main_about_hero">
+<h2>
+    withdrawal
+</h2>
+<div class="about_link">
+    <a href="/">Home</a> &rightarrow; <span>withdraw</span>
+</div>
+</div>
+</section>
+
+<section class="dashboard_sect">
+
+    <section class="dashboard_bar">
+        <span class="dashboard_bar-header">
+            Menu
+        </span>
+        <a href="/dashboard/" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+            <small>
+                Dashboard
+            </small>
+        </a>
+
+        <a href="/deposite/" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg>
+            <small>
+                Deposite
+            </small>
+        </a>
+ 
+        <a href="/asset/withdraw" class="side_link"style="background-color: #1d1d1d24;" >
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M520-120v-80h184L520-384v-112l240 240v-184h80v320H520ZM240-280v-40H120v-80h240v-120H200q-33 0-56.5-23.5T120-600v-120q0-33 23.5-56.5T200-800h40v-40h80v40h120v80H200v120h160q33 0 56.5 23.5T440-520v120q0 33-23.5 56.5T360-320h-40v40h-80Z"/></svg>
+            <small>
+                Withdraw
+            </small>
+        </a>
+
+        <a href="/history/transactions" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>
+            <small>
+               Transaction history
+            </small>
+        </a>
+
+        <a href="/referral/" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg>
+            <small>
+                Referrals
+            </small>
+        </a>
+
+        <a href="/account/settings" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+            <small>
+               Setting
+            </small>
+        </a>
+
+        <a href="/logout/" class="side_link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>
+            <small>
+               Logout
+            </small>
+        </a>
+
+    </section>
+
+<section class="dashboard_content">
+
+    <section class="payment_sect">
+        <h2>Place a Withdrawal</h2>
+        <article class="payment_bord">
+            <div class="pay_box">
+                <label for="coin">Select coin type</label> <br>
+                <select name="coin" id="coin_type">
+                    <option value="">Select coin</option>
+                    <option value="Bitcoin">Bitcoin(BTC)</option>
+                    <option value="Litecoin">Litecoin(LTC)</option>
+                    <option value="Ethereum">Ethereum(ETH)</option>
+                </select>
+            </div>
+
+            <div class="pay_box">
+                <label for="coin">Network</label> <br>
+                <input type="text" name="network" id="network" readonly placeholder="coin network">
+            </div>
+
+            <div class="pay_box">
+                <label for="coin">Network amount</label> <br>
+                <input type="Number" name="amount" id="amount" placeholder="amount">
+            </div>
+
+            <div class="pay_box">
+                <label for="coin">Enter wallet address</label> <br>
+                <div class="address">
+                    <input type="text" name="address" id="address" placeholder="wallet address">
+                </div>
+            </div>
+
+            <div class="pay_box">
+                <button style="cursor:pointer;" class="dep_btn" onclick="withdraw()">Place withdrawal</button>
+            </div>
+            <br>
+        </article>
+        <br>
+        <br>
+    </section>
+
+</section>
+
+<section class="foot_prompt">
+
+    <a href="/dashboard/">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+        <small>
+            Dashboard
+        </small> 
+    </a>
+
+    <a href="/deposite/">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg>
+        <small>
+            Deposite
+        </small> 
+    </a>
+
+    <a href="/asset/withdraw">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M520-120v-80h184L520-384v-112l240 240v-184h80v320H520ZM240-280v-40H120v-80h240v-120H200q-33 0-56.5-23.5T120-600v-120q0-33 23.5-56.5T200-800h40v-40h80v40h120v80H200v120h160q33 0 56.5 23.5T440-520v120q0 33-23.5 56.5T360-320h-40v40h-80Z"/></svg>
+        <small>
+            Withdraw
+        </small> 
+    </a>
+
+    <a href="/history/transactions">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>
+        <small>
+            Transactions
+        </small> 
+    </a>
+
+    <a href="/account/settings">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+        <small>
+            Settings
+        </small> 
+    </a> 
+
+</section>
+
+<script>
+
+   function $(c) {
+    return document.getElementById(c);
+   }
+
+   let _tkn = $('us_tkn').children[0].getAttribute('value')
+
+   let address = $("address");
+
+let coin_select = $("coin_type");
+
+coin_select.addEventListener("change", function() {
+    let coin = coin_select.value;
+    let network = $("network");
+    if (coin=='Bitcoin'){
+        network.value = "BTC";
+        address.value = '{{account.bit_wallet}}';
+    }
+    else if(coin=='Litecoin'){
+        network.value = "LTC";
+        address.value = '{{account.lit_wallet}}';
+    }
+    else if(coin=='Ethereum'){
+        network.value = "ETH";
+        address.value = '{{account.eth_wallet}}';
+    }
+})
+
+   function showmsg(clas, msg){
+    $('float_msg').innerHTML = `<aside class="${clas}" id="${clas}">${msg}
+<span onclick="close_msg(this)">
+<svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="currentcolor" style="cursor:pointer;">
+<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</span>
+</aside>`;
+let _tps = $('float_msg').offsetTop;
+const dist_tp2 =Number(_tps);
+window.scrollTo({ top: dist_tp2, behavior: 'smooth'});
+}
+
+function close_msg(params) {
+    let get = params.parentElement;
+    get.style.display = 'none';
+}
+
+
+function showmsg(clas, msg){
+    $('float_msg').innerHTML = `<aside class="${clas}" id="${clas}">${msg}
+<span onclick="close_msg(this)">
+<svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="currentcolor" style="cursor:pointer;">
+<path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</span>
+</aside>`;
+let _tps = $('float_msg').offsetTop;
+const dist_tp2 =Number(_tps);
+window.scrollTo({ top: dist_tp2, behavior: 'smooth'});
+}
+
+function close_msg(params) {
+    let get = params.parentElement;
+    get.style.display = 'none';
+}
+
+function withdraw(){
+    let amount = $('amount'), newtwork =  $("network");
+    var url = '/place_with/';
+        var form_data = new FormData();
+        form_data.append('amount', amount.value);
+        form_data.append('coin', coin_select.value);
+        form_data.append('network', newtwork.value);
+        form_data.append('address', address.value);
+        if (amount.value=='' || coin_select.value=='' || newtwork.value=="" || address.value=="") {
+            showmsg('e_flash', 'All feilds requered')
+        }else{
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': _tkn
+                },
+                body: form_data,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.S){
+                   animatedText('<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>', data.S, 'login_animeted')
+                   setTimeout(() => {
+                    window.location.href='/deposite/'
+                   }, 1500);
+                }else if(data.E){
+                    showmsg('e_flash', data.E)
+                }else{
+                    showmsg('e_flash', 'Post error occured')
+                }
+            })
+            .catch((error) => {
+                showmsg('e_flash', 'Can not get url or you are not connected to the internet..')
+            })
+        }
+}
+
+function animatedText(icon, text, cls){
+    $('float_msg').classList.add(cls)
+    $('float_msg').innerHTML = `<div>${icon} <span>${text}</span></div>`;
+}
+
+</script>
+
+
+{% endblock %}

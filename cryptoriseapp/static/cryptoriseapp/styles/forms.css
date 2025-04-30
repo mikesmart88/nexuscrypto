@@ -1,0 +1,205 @@
+.foot{
+    display: none;
+}
+
+.form_sect{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(---font);
+}
+
+.form_sect h2{
+    font-size: 2.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.form_holder{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
+    width: 500px;
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--background);
+    box-shadow: 0px 0px 10px #0000001a;
+    border-radius: 10px;
+}
+
+.form_box{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.form_box label{
+    font-size: 13px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.form_box input{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(---font);
+    background-color: var(---background);
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #787878db;
+    font-weight: 500;
+}
+
+.form_box select{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(---font);
+    background-color: var(---background);
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #787878db;
+    font-weight: 500;
+}
+
+.form a{
+    text-decoration: none;
+    font-size: 13px;
+    box-sizing: border-box;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(---support_color);
+}
+
+.form_box button{
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--text_color);
+    color: var(---background) !important;
+    border: none;
+    height: 50px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(---font);
+    letter-spacing: 1.5px;
+    transition: .3s linear;
+}
+
+.form_box button:hover{
+    background-color: var(---background);
+    color: var(---support_color) !important;
+    border: 2px solid var(--text_color);
+}
+
+.form_text{
+    font-size: 13px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.form_text a{
+    text-decoration: none;
+    color: var(---support_color);
+}
+
+.highlight{
+    outline: none !important;
+    border: 2px solid #ff8120f2 !important;
+}
+
+.login_animeted{
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    background-color: #0000008b !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_animeted div{
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fff;
+    color: var(--text_color);
+    font-family: var(---font);
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001a;
+    transition: 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+    animation: fadein 3s 0s 1 forwards linear;
+    min-width: 250px;
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+        visibility: hidden;
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.login_animeted div svg{
+    width: 100px;
+    height: 100px;
+    color: #0baf0b;
+}
+
+@media screen and (max-width:750px) {
+    .form_sect h2{
+        font-size: 1.5rem;
+    }
+    .form{
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .form{
+        padding:10px 0px;
+    }
+}

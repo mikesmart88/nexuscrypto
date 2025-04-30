@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadata %}
+
+<meta name="description" content="Nexuscrypto investment platform" /> 
+<link rel="canonical" href="https://{{request.path_info}}" />               
+<meta property="og:site_name" content="Cryptorise" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" Nexuscrypto - User login" />
+<meta property="og:description" content="Nexuscrypto investment platform" />
+<meta property="og:image" content="https://{% static 'blkapp/images/blklogo.png' %}" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:url" content="https://{{request.path_info}}" />
+<meta name="twitter:site" content="@nexuscrypto"/>
+<meta name="twitter:title" content="Nexuscrypto - User login" />
+<meta name="twitter:description" content="Nexuscrypto investment platform" />
+<meta name="twitter:creator" content="@pythonmaster" />
+<meta name="twitter:image" content="https://{% static '' %}" />
+<meta property="twiter:card" content="summary_large_image" />
+<meta name="twitter:image:alt" content="cryptologo" />
+<link rel="stylesheet" href="{% static 'cryptoriseapp/styles/forms.css' %}">
+
+{% endblock %}
+
+{% block title %} Nexuscrypto - User login {% endblock %}
+
+{% block content %}
+
+<section class="form_sect">
+    <h2>
+        Welcome Back
+    </h2>
+
+    <section class="form_holder">
+        <article id="login_form" class="form">
+            <div class="form_box">
+                <label for="user_name">Username</label> <br>
+                <input type="text" name="user_name" id="username">
+                <span id="u_msg" style="font-size: 13px; color:#f64343;"></span>
+            </div>
+
+            <div class="form_box">
+                <label for="user_name">Password</label> <br>
+                <input type="password" name="passwd" id="password">
+                <span id="p_msg" style="font-size: 13px; color:#f64343;"></span>
+            </div>
+
+            <a href="">Forgot password</a>
+
+            <div class="form_box">
+                <button class="sub_btn" onclick="login_user()">
+                    Login
+                </button>
+            </div>
+        </article>
+
+        <br>
+
+        <p class="form_text">
+            Don't have an account? <a href="/register/">Create one</a>
+        </p>
+
+    </section>
+
+    <script src="{% static 'cryptoriseapp/scripts/ajax.js' %}"></script>
+
+</section>
+
+{% endblock %}

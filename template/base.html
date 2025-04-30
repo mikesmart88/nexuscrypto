@@ -24,6 +24,62 @@
 </head>
 <body>
 
+    <aside class="side_bar_set" id="side_body">
+        <a href="/">Home</a>
+        <a href="/about/">About us</a>
+        <a href="/faq/">Faq</a>
+        {% if request.user.is_authenticated %}
+        <a href="/dashboard/">Dashboard</a>
+        {% else %}
+        <a href="/register/" class="log">Register</a>
+        <a href="/login/"class="log" >Login</a>
+        {% endif %}
+
+        {% block side_content %}
+
+        {% endblock %}
+
+    </aside>
+
+    <a href="" class="tele_link">
+        <img src="{% static 'cryptoriseapp/images/telegram.png' %}" alt="">
+    </a>
+
+    <section class="min_chat_holder" id="chat_holder">
+        <header class="chat_head">
+            <div class="top_head">
+                <span class="close" style="cursor: pointer;" onclick="closechat()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </span>
+            </div>
+            <div class="comp">
+                <span class="comp_img">
+                    <img src="{% static 'cryptoriseapp/images/favicon.ico' %}" alt="">
+                </span>
+                <span>
+                    <b>How can we help you?</b> <br>
+                    <small>
+                        We reply immediately
+                    </small>
+                </span>
+            </div>
+        </header>
+        <div class="chat_body">
+
+        </div>
+        <form method="post" class="chat_foot">
+           <div class="input">
+            <input type="text" name="" id=""><span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M720-330q0 104-73 177T470-80q-104 0-177-73t-73-177v-370q0-75 52.5-127.5T400-880q75 0 127.5 52.5T580-700v350q0 46-32 78t-78 32q-46 0-78-32t-32-78v-370h80v370q0 13 8.5 21.5T470-320q13 0 21.5-8.5T500-350v-350q-1-42-29.5-71T400-800q-42 0-71 29t-29 71v370q-1 71 49 120.5T470-160q70 0 119-49.5T640-330v-390h80v390Z"/></svg></span>
+           </div>
+        </form>
+    </section>
+
+    <div class="chat_bar" onclick="openchat(this)">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M280-240q-17 0-28.5-11.5T240-280v-80h520v-360h80q17 0 28.5 11.5T880-680v600L720-240H280ZM80-280v-560q0-17 11.5-28.5T120-880h520q17 0 28.5 11.5T680-840v360q0 17-11.5 28.5T640-440H240L80-280Z"/></svg>
+    </div>
+
+    <div class="float_msg" id="float_msg"></div>
+
     <header class="head">
         <div class="nav1">
             <span>
@@ -42,7 +98,7 @@
         </div>
 
         <nav class="navagator">
-            <a href="" class="logo_holder">
+            <a href="/" class="logo_holder">
                 <span class="logo">
                     <img src="{% static 'cryptoriseapp/images/favicon.ico' %}" alt="">
                 </span>
@@ -52,31 +108,32 @@
             </a>
 
             <div class="nav_link">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">FAQ</a>
-                <a href="" class="user_link">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/login/" class="user_link">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M391-480q-36 0-60-27t-19-63l13-98q8-57 52-94.5T480-800q59 0 103 37.5t52 94.5l13 98q5 36-19 63t-60 27H391Zm0-80h178l-13-96q-4-28-25.5-46T480-720q-29 0-50.5 18T404-656l-13 96Zm89 0ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240 0Z"/></svg>
                     Account
                 </a>
             </div>
 
-            <div class="language">
+
+            <div class="language" id="google_translate_element">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg> 
                 </span>
-                <input type="text" id="language" list="language_list" placeholder="select language">
-                <datalist id="language_list">
-                    <option value="English">English</option>
-                </datalist>
             </div>
+
+            <span class="menu" onclick="sidebar(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentcolor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </span>
 
         </nav>
 
     </header>
 
     <main class="main_content">
-
+        <wt-tkn id="us_tkn">{% csrf_token %}</wt-tkn>
         {% block content %} {% endblock %}
 
     </main>
@@ -95,17 +152,17 @@
             <div>
                 <p>Company</p>
                 <a href="/">Home</a> <br>
-                <a href="">About</a> <br>
-                <a href="">FAQ</a> <br>
-                <a href="">News</a> <br>
-                <a href="">Rate us</a>
+                <a href="/about/">About</a> <br>
+                <a href="/faq/">FAQ</a> <br>
+                <a href="/">News</a> <br>
+                <a href="/">Rate us</a>
             </div>
 
             <div>
                 <p>User</p>
-                <a href="/">Register</a> <br>
-                <a href="">Login</a> <br>
-                <a href="">My dashboard</a>
+                <a href="/register/">Register</a> <br>
+                <a href="/login/">Login</a> <br>
+                <a href="/dashboard/">My dashboard</a>
             </div>
 
             <div class="newslist">
@@ -139,6 +196,15 @@
         </div>
 
     </footer>
-    
+
+    <script src="{% static 'cryptoriseapp/scripts/base.js' %}"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
 </body>
 </html>
